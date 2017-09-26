@@ -166,7 +166,7 @@ client.urgent		$urgent-bg-color	$urgent-bg-color	$text-color		#ffa600
 hide_edge_borders both
 
 # Set desktop wallpaper
-exec_always feh --bg-fill /home/kensworth/Pictures/wallpaper.jpg
+exec_always feh --bg-fill /home/kensworth/Pictures/wallpaper.png
 
 
 ############# i3bar Config #############
