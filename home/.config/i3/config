@@ -149,9 +149,9 @@ bindsym $mod+r mode "resize"
 ########### Colors & Theming ###########
 
 # Set color profile bindings
-set $bg-color			#444851
+set $bg-color			#404552
 set $inactive-bg-color		#2f343f
-set $text-color			#f3f4f5
+set $text-color			#d3dae3
 set $inactive-text-color	#676e7d
 set $urgent-bg-color		#ffa726
 
