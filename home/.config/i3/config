@@ -1,0 +1,219 @@
+##### Kensworth's i3wm config file #####
+######## Place in ~/.config/i3/ ########
+# i3 config file (v4)
+
+
+############ Base i3 Config ############
+
+# Bind $mod to Super key
+set $mod Mod4
+
+# Font selection for window titles and i3bar
+# If you dont have Futura, I recommend Liberation Sans
+font pango:Futura 10
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# Exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+
+######## i3 Navigation Bindings ########
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Start a terminal
+bindsym $mod+Return exec xfce4-terminal
+
+# Close current window
+bindsym $mod+Shift+q kill
+
+# Start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run
+
+# Change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+
+########### Workspace Config ###########
+
+# Unify workspace names with bindings
+# The icons below use Font Awesome (fontawesome.io)
+set $workspace1 "1 "
+set $workspace2 "2 "
+set $workspace3 "3 "
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7 "
+set $workspace8 "8 "
+set $workspace9 "9 "
+set $workspace10 "10 "
+
+# Switch to workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+# Force specific apps to launch in specific workspaces
+assign [class="Firefox"] $workspace1
+assign [class="Xfce4-terminal"] $workspace2
+assign [class="VirtualBox"] $workspace7
+assign [class="Virt-manager"] $workspace8
+assign [class="discord"] $workspace9
+assign [class="Google Play Music Desktop Player"] $workspace10
+
+
+########### Windows Resizing ###########
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+
+########### Colors & Theming ###########
+
+# Set color profile bindings
+set $bg-color			#444851
+set $inactive-bg-color		#2f343f
+set $text-color			#f3f4f5
+set $inactive-text-color	#676e7d
+set $urgent-bg-color		#ffa726
+
+# Assign window colors
+#			border			background		text			indicator
+client.focused		$bg-color		$bg-color		$text-color		#ffa600
+client.unfocused	$inactive-bg-color	$inactive-bg-color	$inactive-text-color	#ffa600
+client.focused_inactive	$inactive-bg-color	$inactive-bg-color	$inactive-text-color	#ffa600
+client.urgent		$urgent-bg-color	$urgent-bg-color	$text-color		#ffa600
+
+# Hide edge borders for a cleaner look
+hide_edge_borders both
+
+# Set desktop wallpaper
+exec_always feh --bg-fill /home/kensworth/Pictures/wallpaper.jpg
+
+
+############# i3bar Config #############
+
+# Start i3bar to display a workspace bar
+bar {
+        status_command i3status
+	colors {
+		background $bg-color
+		separator #757575
+		#			border			background			text
+		focused_workspace	$bg-color		$bg-color			$text-color
+		inactive_workspace	$inactive-bg-color	$inactive-bg-color		$inactive-text-color
+		urgent_workspace	$urgent-bg-color	$urgent-bg-color		$text-color
+	}
+}
+
+
+########### Custom Shortcuts ###########
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Screenshot with PrintScreen key
+bindsym Print exec scrot '%m-%d-%Y_%H:%M:%S_scrot.png' -e 'mv $f ~/Pictures'
+
+# Lock screen with i3lock
+bindsym $mod+shift+x exec i3lock --color "$bg-color"
+
+# Launch Virt-Manager with sudo privileges
+bindsym $mod+shift+w exec gksu virt-manager
+
+# Quick application shortcuts
+bindsym $mod+f exec firefox
+bindsym $mod+t exec thunar
+
+
+######### Startup Applications #########
+
+# Window compositor
+# Compton config file available in the dotfiles repo
+exec compton
+
+# NetworkManager system icon
+exec nm-applet
+
+# Autostart Firefox
+exec firefox --no-startup-window
