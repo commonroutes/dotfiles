@@ -9,7 +9,7 @@
 set $mod Mod4
 
 # Font selection for window titles and i3status
-# If you dont have Futura, I recommend Liberation Sans
+# If Futura is not available, Ubuntu is a great alternative
 font pango:Futura 10
 
 # Reload the configuration file
