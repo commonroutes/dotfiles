@@ -6,10 +6,10 @@ the /home directory files should be placed in your respective home user folder (
 -(only tested locally on Ubuntu 16.04.3)
 
 -to run the script, clone this repo and make it executable:<br>
-`git clone https://github.com/commonroutes/dotfiles`
-`cd dotfiles`
-`chmod +x install.sh`
-`./install.sh`
+`git clone https://github.com/commonroutes/dotfiles`<br>
+`cd dotfiles`<br>
+`chmod +x install.sh`<br>
+`./install.sh`<br>
 
 my configs will assume the arc-dark theme and many third-party applications<br>
 -comb through and make changes according to your preferences and/or applications<br>
