@@ -8,7 +8,7 @@
 # Bind $mod to Super key
 set $mod Mod4
 
-# Font selection for window titles and i3bar
+# Font selection for window titles and i3status
 # If you dont have Futura, I recommend Liberation Sans
 font pango:Futura 10
 
@@ -75,10 +75,10 @@ bindsym $mod+space focus mode_toggle
 # The icons below use Font Awesome (fontawesome.io)
 set $workspace1 "1 "
 set $workspace2 "2 "
-set $workspace3 "3 "
-set $workspace4 "4 "
+set $workspace3 "3 "
+set $workspace4 "4"
 set $workspace5 "5"
-set $workspace6 "6"
+set $workspace6 "6 "
 set $workspace7 "7 "
 set $workspace8 "8 "
 set $workspace9 "9 "
@@ -112,6 +112,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 assign [class="Firefox"] $workspace1
 assign [class="Xfce4-terminal"] $workspace2
 assign [class="Atom"] $workspace3
+assign [class="Thunderbird"] $workspace6
 assign [class="VirtualBox"] $workspace7
 assign [class="Virt-manager"] $workspace8
 assign [class="discord"] $workspace9
@@ -167,8 +168,8 @@ exec_always feh --bg-fill /home/kensworth/Pictures/wallpaper.png
 
 ############# i3bar Config #############
 
-# Start i3bar to display a workspace bar
-bar {
+# Start and configure i3status and its theming
+ bar {
         status_command i3status
 	colors {
 		background $bg-color
@@ -178,7 +179,7 @@ bar {
 		inactive_workspace	$inactive-bg-color	$inactive-bg-color		$inactive-text-color
 		urgent_workspace	$urgent-bg-color	$urgent-bg-color		$text-color
 	}
-}
+ }
 
 
 ########### Custom Shortcuts ###########
@@ -197,13 +198,16 @@ bindsym $mod+shift+x exec i3lock --color "$bg-color"
 # Launch Virt-Manager with sudo privileges
 bindsym $mod+shift+w exec gksu virt-manager
 
+# Launch VirtualBox with sudo privileges
+bindsym $mod+shift+v exec gksu virtualbox
+
 # Quick application shortcuts
 bindsym $mod+f exec firefox
+bindsym $mod+m exec thunderbird
 bindsym $mod+t exec thunar
 bindsym $mod+a exec atom
-bindsym $mod+n exec airvpn
-bindsym $mod+m exec thunderbird
 bindsym $mod+g exec google-play-music-desktop-player
+bindsym $mod+n exec airvpn
 
 
 ######### Startup Applications #########
