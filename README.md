@@ -6,6 +6,8 @@ i3 screenshot:
 
 **e**ssentials:
 - [arc-dark](https://github.com/horst3180/Arc-theme) GTK theme
+- [numix-icon-theme-circle](https://github.com/numixproject/numix-icon-theme-circle) icon theme
+- [futura bt](https://www.fontshop.com/families/futura-bt) font, best free alternative is [ubuntu](http://font.ubuntu.com/)
 - [font awesome](http://fontawesome.io/) for workspace icons
 - [feh](https://feh.finalrewind.org/) to apply wallpaper
 - [compton](https://github.com/chjj/compton) window compositor
