@@ -219,5 +219,8 @@ exec compton
 # NetworkManager system icon
 exec nm-applet
 
+# Nextcloud synchronization app
+exec nextcloud
+
 # Autostart Firefox
 exec firefox --no-startup-window
