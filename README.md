@@ -1,11 +1,6 @@
 # dotfiles
 various dotfile configs for i3wm &amp; xfce
 
-### i3 screenshot:
-![screenshot of i3 desktop](https://i.imgur.com/rp8CbHK.png)
-
-### xfce screenshot:
-![screenshot of xfce desktop](http://i.imgur.com/fB0vN6C.png)
 
 **e**ssentials:
 - [arc-dark](https://github.com/horst3180/Arc-theme) GTK theme
@@ -30,3 +25,12 @@ various dotfile configs for i3wm &amp; xfce
 
 **t**he compton config is currently a copy/paste job from [duncanlock](http://duncanlock.net/blog/2013/06/07/how-to-switch-to-compton-for-beautiful-tear-free-compositing-in-xfce/)<br>
 - comments will eventually be tidied up, but the core configs will likely remain the same
+
+
+### screenshots
+
+i3wm:
+![screenshot of i3 desktop](https://i.imgur.com/rp8CbHK.png)
+
+xfce:
+![screenshot of xfce desktop](http://i.imgur.com/iNBgywE.png)
