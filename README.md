@@ -2,7 +2,7 @@
 various dotfile configs for i3wm &amp; xfce
 
 i3 screenshot:
-![screenshot of i3 desktop](https://i.imgur.com/UALXqJy.png)
+![screenshot of i3 desktop](https://i.imgur.com/rp8CbHK.png)
 
 **e**ssentials:
 - [arc-dark](https://github.com/horst3180/Arc-theme) GTK theme
