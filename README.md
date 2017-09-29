@@ -5,6 +5,7 @@ various dotfile configs for i3wm &amp; xfce
 **e**ssentials:
 - [arc-dark](https://github.com/horst3180/Arc-theme) GTK theme
 - [numix-icon-theme-circle](https://github.com/numixproject/numix-icon-theme-circle) icon theme
+- [breeze-cursor](https://store.kde.org/content/show.php/Breeze?content=165371) from the KDE environment, available in nearly every distro
 - [futura bt](https://www.fontshop.com/families/futura-bt) font, best free alternative is [ubuntu](http://font.ubuntu.com/)
 - [font awesome](http://fontawesome.io/) for workspace icons
 - [feh](https://feh.finalrewind.org/) to apply wallpaper
