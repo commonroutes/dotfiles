@@ -9,7 +9,7 @@
 set $mod Mod4
 
 # Font selection for window titles and i3status
-# If Futura is not available, Ubuntu is a great alternative
+# If Futura is not available, Ubuntu or Cabin are great alternatives
 font pango:Futura 10
 
 # Reload the configuration file
@@ -208,6 +208,7 @@ bindsym $mod+t exec thunar
 bindsym $mod+a exec atom
 bindsym $mod+g exec google-play-music-desktop-player
 bindsym $mod+n exec airvpn
+bindsym $mod+shift+d exec discord
 
 
 ######### Startup Applications #########

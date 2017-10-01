@@ -6,12 +6,13 @@ various dotfile configs for i3wm &amp; xfce
 - [arc-dark](https://github.com/horst3180/Arc-theme) GTK theme
 - [numix-icon-theme-circle](https://github.com/numixproject/numix-icon-theme-circle) icon theme
 - [breeze-cursor](https://store.kde.org/content/show.php/Breeze?content=165371) from the KDE environment, available in nearly every distro
-- [futura bt](https://www.fontshop.com/families/futura-bt) font, best free alternative is [ubuntu](http://font.ubuntu.com/)
+- [futura bt](https://www.fontshop.com/families/futura-bt) font, [ubuntu](http://font.ubuntu.com/) and [cabin](https://fonts.google.com/specimen/Cabin) are great free alternatives
 - [font awesome](http://fontawesome.io/) for workspace icons
 - [feh](https://feh.finalrewind.org/) to apply wallpaper
 - [compton](https://github.com/chjj/compton) window compositor
 
-![font comparison](https://i.imgur.com/xunPA53.png)
+![ubuntu comparison](https://i.imgur.com/xunPA53.png)
+![cabin comparison](https://i.imgur.com/HQwO2VA.png)
 
 **t**he /home directory files should be placed in your respective home user folder (e.g. `/home/username/`)<br>
 - there is a crude install script to force-copy all configs to the correct locations
