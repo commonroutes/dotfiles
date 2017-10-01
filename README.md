@@ -11,8 +11,7 @@ various dotfile configs for i3wm &amp; xfce
 - [feh](https://feh.finalrewind.org/) to apply wallpaper
 - [compton](https://github.com/chjj/compton) window compositor
 
-![ubuntu comparison](https://i.imgur.com/xunPA53.png)
-![cabin comparison](https://i.imgur.com/HQwO2VA.png)
+![font comparison](https://i.imgur.com/PYbYwfd.png)
 
 **t**he /home directory files should be placed in your respective home user folder (e.g. `/home/username/`)<br>
 - there is a crude install script to force-copy all configs to the correct locations
